@@ -48,7 +48,7 @@ const Dashboard : React.FC = () => {
         <a href='teste'>
           <img
             src='https://pbs.twimg.com/media/EcQTWiNXgAYSLVt?format=jpg&name=900x900'
-            alt='cat image'>
+            alt='cat'>
           </img>
           <div>
             <strong>Cat</strong>
@@ -62,7 +62,7 @@ const Dashboard : React.FC = () => {
             <a
             key={repository.full_name}
             href='teste'>
-                <img src={repository.owner.avatar_url}></img>
+                <img alt={repository.owner.login} src={repository.owner.avatar_url}></img>
                 <div>
                   <strong>{repository.full_name}</strong>
                   <p>{repository.description}</p>
@@ -73,7 +73,6 @@ const Dashboard : React.FC = () => {
 
         }
       </RepositoryList>
-
     </>
   )
 }
